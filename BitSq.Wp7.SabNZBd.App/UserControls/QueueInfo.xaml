@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="BitSq.Wp7.SabNZBd.App.UserControls.QueueInfo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <StackPanel x:Name="LayoutRoot" Background="Transparent">
+        <Grid>
+            <TextBlock Text="Queue" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextExtraLargeStyle}" />
+            <TextBlock HorizontalAlignment="Right" VerticalAlignment="Bottom" Text="{Binding Percentage}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}" />
+        </Grid>
+
+        <Grid Margin="12,2,0,4" Background="LightGray" Width="Auto" Height="8">
+            <Rectangle Fill="{StaticResource PhoneAccentBrush}" Width="{Binding ProgressWidth}"  HorizontalAlignment="Left"  />
+        </Grid>
+
+        <Grid>
+            <TextBlock Text="{Binding SizeRemainingFriendly}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}" Foreground="{StaticResource PhoneAccentBrush}" />
+            <TextBlock HorizontalAlignment="Right" Text="02:14:33" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}" Foreground="{StaticResource PhoneAccentBrush}" />
+        </Grid>
+        <TextBlock Text="{Binding QueueLengthFriendly}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}" Foreground="{StaticResource PhoneAccentBrush}" />
+    </StackPanel>
+</UserControl>
